@@ -1,0 +1,75 @@
+body {
+  background: black;
+  color: white;
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+
+  header {
+    overflow: hidden;
+    h1 {
+      float: left;
+      font-size: 30px;
+      letter-spacing: -2px;
+    }
+    nav {
+      float: right;
+    }
+    li {
+      list-style: none;
+      display: inline;
+      margin-right: 20px;
+    }
+    li:hover {
+      border: 1px solid white;
+    }
+  }
+}
+
+main {
+  margin: 20px;
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  button{
+    margin: 20px 10vw;
+    padding: 5px 10px;
+    
+  }
+}
+
+.my_picture {
+    width: 100%;
+  line-height: 7px;
+  letter-spacing: -1px;
+  font-size: 14px;
+box-sizing: content-box;
+word-wrap: break-word;
+font-family: 'Courier New', Courier, monospace;
+  background: url("images/my_picture3.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -moz-background-clip: text;
+  -o-background-clip: text;
+}
+
+.selected {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  font-weight: 900;
+}
+
+.my_profile{
+    margin:20px;
+}

@@ -2,12 +2,31 @@ body {
   background: black;
   color: white;
   margin: 0;
+  padding: 0;
   width: 100%;
   font-size: 14px;
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
 }
 
+main {
+  box-sizing: border-box;
+}
+/* header */
 body header {
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-radius: 0px 0 20px 20px;
+  box-shadow: 0px 0px 10px 5px white;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  
 }
 
 body header h1 {
@@ -20,30 +39,51 @@ body header nav {
   float: right;
 }
 
-body header li {
+body header li,
+.hidden a {
   list-style: none;
   display: inline;
   margin-right: 20px;
+  text-decoration: none;
+  color: white;
 }
 
-body header li:hover {
-  border: 1px solid white;
+.hidden li:hover :not(.selected) {
+  border-bottom: 2px solid rgb(153, 153, 153);
+  color: rgb(153, 153, 153);
+  padding: 10px 0px;
 }
 
-main {
-  margin: 20px;
+.nav_toggler {
+  display: none;
 }
+
+.selected :not(.resume_download) {
+  border-bottom: 3px solid rgb(255, 255, 255);
+  padding: 10px 0px;
+  font-weight: 900;
+}
+
+.light_dark {
+  background: white;
+  display: block;
+  overflow: visible;
+}
+
+/* end of header */
 
 main h1 {
   text-align: center;
   margin: 0;
+  padding: 0;
 }
 
+/* body */
 .container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
+  grid-template-columns: 40% 60%;
 }
 
 .container button {
@@ -57,9 +97,9 @@ main h1 {
   letter-spacing: -1px;
   font-size: 14px;
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   word-wrap: break-word;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   background: url("images/my_picture3.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -70,14 +110,25 @@ main h1 {
   -o-background-clip: text;
 }
 
-.selected {
-  background: white;
-  color: black;
-  padding: 10px 20px;
-  font-weight: 900;
-}
-
 .my_profile {
   margin: 20px;
 }
+
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    background: red;
+  }
+
+  .hidden {
+    position: relative;
+    display: none;
+    background: green;
+  }
+
+  .nav_toggler {
+    display: block;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

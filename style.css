@@ -26,13 +26,17 @@ body header {
   box-shadow: 0px 0px 10px 5px white;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
   
 }
 
 body header h1 {
-  float: left;
   font-size: 30px;
   letter-spacing: -2px;
+  flex-wrap: nowrap;
 }
 
 body header nav {
@@ -40,7 +44,7 @@ body header nav {
 }
 
 body header li,
-.hidden a {
+.hidden a ,.list a{
   list-style: none;
   display: inline;
   margin-right: 20px;
@@ -48,28 +52,48 @@ body header li,
   color: white;
 }
 
-.hidden li:hover :not(.selected) {
+.hidden li:hover :not(.resume_download) {
   border-bottom: 2px solid rgb(153, 153, 153);
   color: rgb(153, 153, 153);
   padding: 10px 0px;
 }
-
+.hidden{
+  display: flex;
+}
 .nav_toggler {
   display: none;
 }
 
 .selected :not(.resume_download) {
   border-bottom: 3px solid rgb(255, 255, 255);
-  padding: 10px 0px;
+  padding: 5px 0px;
   font-weight: 900;
 }
 
 .light_dark {
   background: white;
-  display: block;
-  overflow: visible;
+  width:50px;
 }
 
+.resume_download{
+  border-radius: 5px;
+  border: 1px white solid;
+  color: white;
+  background: rgba(0, 0, 0, 0);
+
+  padding:10px 20px;
+  font-size: 15px;
+
+}
+
+.resume_download img{
+  border-radius: 50%;
+  width:20px;
+}
+
+.list{
+  display: none;
+}
 /* end of header */
 
 main h1 {
@@ -79,11 +103,14 @@ main h1 {
 }
 
 /* body */
+
+/* about me */
 .container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40% 60%;
   grid-template-columns: 40% 60%;
+  padding:10px;
 }
 
 .container button {
@@ -91,44 +118,61 @@ main h1 {
   padding: 5px 10px;
 }
 
-.my_picture {
+.my_picture img {
   width: 100%;
-  line-height: 7px;
-  letter-spacing: -1px;
-  font-size: 14px;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  word-wrap: break-word;
-  font-family: "Courier New", Courier, monospace;
-  background: url("images/my_picture3.jpeg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  -moz-background-clip: text;
-  -o-background-clip: text;
 }
 
 .my_profile {
   margin: 20px;
 }
 
-@media screen and (max-width: 800px) {
-  html,
-  body {
-    background: red;
-  }
+/* end of ABOUT ME */
 
-  .hidden {
-    position: relative;
+/* PROJECT */
+#projects{
+  padding:10px
+}
+
+/* move up */
+  .move_up{
+    width: 40px;
+    border-radius: 50%;
+    position: sticky;
+    left:95%;
+    top:90%;
+    opacity: 70%;
+  }
+/* end of move up */
+/* end of body */
+
+
+
+@media screen and (max-width: 800px) {
+
+
+  .hidden ul{
     display: none;
-    background: green;
   }
 
   .nav_toggler {
     display: block;
   }
+
+  .list{
+    display: block;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  body header{
+    padding: 20px;
+  }
+
 }
 
 /*# sourceMappingURL=style.css.map */

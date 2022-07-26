@@ -15,14 +15,14 @@ toggler.addEventListener("click", function () {
     body.style.backgroundColor = "black";
     body.style.color = "white";
     move_up.src = "./icons8-up-48 (1).png"
-    light.src = "../my_portfolio/images/lightbulb-off-fill.svg";
+    light.src = "./lightbulb-off-fill.svg";
 
   } else if (body.style.backgroundColor = "black") {
-    light.src = "../my_portfolio/images/lightbulb.svg";
+    light.src = "./lightbulb.svg";
     body.style.backgroundColor = "white";
     body.style.color = "black";
     move_up.src = "./icons8-up-48.png";
-    light.src = "../my_portfolio/images/lightbulb.svg";
+    light.src = "./lightbulb.svg";
 
   }
 });

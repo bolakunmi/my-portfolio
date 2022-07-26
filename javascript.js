@@ -1,31 +1,29 @@
-const toggler = document.querySelector(".toggler");
+const toggler = document.querySelector(".light_dark");
 const light = document.querySelector(".light");
 const body = document.querySelector("body");
 const small_button = document.querySelector(".small_button");
 const header = document.querySelector("header");
 const nav_toggler = document.querySelector(".nav_toggler");
-const nav_list = document.querySelector(".hidden");
+const nav_list = document.querySelector(".list");
 const selected_item = document.querySelectorAll(".hidden a");
 const move_up = document.querySelector(".move_up");
 
-small_button.style.float = "right";
+body.style.backgroundColor = "black";
 toggler.addEventListener("click", function () {
-  if (small_button.style.float == "left") {
-    small_button.style.float = "right";
-    light.src = "../my_portfolio/images/lightbulb-off-fill.svg";
+  if (body.style.backgroundColor == "white") {
+    // change the image src
     body.style.backgroundColor = "black";
     body.style.color = "white";
     move_up.src = "./icons8-up-48 (1).png"
-    // header.style.backgroundColor = "white";
-    // header.style.color = "black"
-  } else if (small_button.style.float == "right") {
-    small_button.style.float = "left";
+    light.src = "../my_portfolio/images/lightbulb-off-fill.svg";
+
+  } else if (body.style.backgroundColor = "black") {
     light.src = "../my_portfolio/images/lightbulb.svg";
     body.style.backgroundColor = "white";
     body.style.color = "black";
-    move_up.src = "./icons8-up-48.png"
-    // header.style.backgroundColor = "black";
-    // header.style.color = "white";
+    move_up.src = "./icons8-up-48.png";
+    light.src = "../my_portfolio/images/lightbulb.svg";
+
   }
 });
 
@@ -35,7 +33,7 @@ move_up.addEventListener("click", function () {
 });
 
 // toggler display for nav bar
-nav_list.style.display = "block";
+nav_list.style.display = "none";
 nav_toggler.addEventListener("click", function () {
   if (nav_list.style.display == "none") {
     console.log("visible");
@@ -50,8 +48,10 @@ nav_toggler.addEventListener("click", function () {
   }
 });
 
-if (window.innerWidth > 800) {
-  nav_list.style.display = "block";
+if (window.innerWidth >= 800) {
+  nav_list.style.display = "none";
+  console.log("visible");
+} else {
   console.log("visible");
 }
 

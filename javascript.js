@@ -4,7 +4,7 @@ const body = document.querySelector("body");
 const small_button = document.querySelector(".small_button");
 const header = document.querySelector("header");
 const nav_toggler = document.querySelector(".nav_toggler");
-const nav_list = document.querySelector(".list");
+const nav_list = document.querySelector(".hidden ul");
 const selected_item = document.querySelectorAll(".hidden a");
 const move_up = document.querySelector(".move_up");
 
@@ -33,27 +33,22 @@ move_up.addEventListener("click", function () {
 });
 
 // toggler display for nav bar
-nav_list.style.display = "none";
-nav_toggler.addEventListener("click", function () {
-  if (nav_list.style.display == "none") {
-    console.log("visible");
-    nav_list.style.display = "block";
-  } else if (nav_list.style.display == "block") {
-    console.log("hidden");
-    if (window.innerWidth < 800) {
-      nav_list.style.display = "none";
-    } else {
-      nav_list.style.display = "block";
-    }
-  }
-});
+// nav_list.style.display = "none";
+// nav_toggler.addEventListener("click", function () {
+//   if (nav_list.style.display == "none") {
+//     console.log("visible");
+//     nav_list.style.display = "block";
+//   } else if (nav_list.style.display == "block") {
+//     console.log("hidden");
+//     if (window.innerWidth < 800) {
+//       nav_list.style.display = "none";
+//     } else {
+//       nav_list.style.display = "block";
+//     }
+//   }
+// });
 
-if (window.innerWidth >= 800) {
-  nav_list.style.display = "none";
-  console.log("visible");
-} else {
-  console.log("visible");
-}
+
 
 // to jump around selected items
 for (let i = 0; i < 3; i++) {

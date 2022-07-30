@@ -14,19 +14,16 @@ toggler.addEventListener("click", function () {
     // change the image src
     body.style.backgroundColor = "black";
     body.style.color = "white";
-    move_up.src = "./icons8-up-48 (1).png"
+    move_up.src = "./icons8-up-48 (1).png";
     light.src = "./lightbulb-off-fill.svg";
-
-  } else if (body.style.backgroundColor = "black") {
+  } else if ((body.style.backgroundColor = "black")) {
     light.src = "./lightbulb.svg";
     body.style.backgroundColor = "white";
     body.style.color = "black";
     move_up.src = "./icons8-up-48.png";
     light.src = "./lightbulb.svg";
-
   }
 });
-
 
 move_up.addEventListener("click", function () {
   window.scrollTo(0, 0);
@@ -48,8 +45,6 @@ move_up.addEventListener("click", function () {
 //   }
 // });
 
-
-
 // to jump around selected items
 for (let i = 0; i < 3; i++) {
   nav_list.children[i].addEventListener("click", function () {
@@ -59,3 +54,25 @@ for (let i = 0; i < 3; i++) {
     nav_list.children[i].classList.add("selected");
   });
 }
+
+
+
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+    // else {
+    //   reveals[i].classList.remove("active");
+    // }
+  }
+}
+
+window.addEventListener("scroll", reveal);

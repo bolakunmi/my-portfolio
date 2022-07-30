@@ -59,7 +59,7 @@ body header li,
 .hidden {
   display: flex;
 }
-.hidden li:hover :not(.selected) {
+.hidden li:not(.selected):hover {
   border-bottom: 2px solid rgb(153, 153, 153);
   color: rgb(153, 153, 153);
   padding: 5px 0px;
@@ -104,6 +104,12 @@ main h1 {
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.resume_download:hover,
+.second_resume_download :hover {
+  color: rgb(153, 153, 153);
+  border-color: rgb(153, 153, 153);
 }
 
 /* body */
@@ -162,19 +168,65 @@ main h1 {
   border-radius: 20px;
   border: 1px solid black;
 }
-
+.second_resume p {
+  margin: 10px;
+}
 .second_resume_download {
   color: black;
+  margin-bottom: 10px;
+
+  border-radius: 5px;
+  border: 1px black solid;
+
+  background: rgba(0, 0, 0, 0);
+
+  padding: 10px 20px;
+  font-size: 15px;
 }
 footer {
   background: rgba(0, 0, 0, 0.8);
   color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 30px;
+}
+footer a {
+  color: white;
+  margin: 10px;
+}
+
+.contact_me {
+  transform: translateY(7px);
 }
 
 @media screen and (min-width: 480px) {
   .second_resume {
     transform: translateY(30px);
     padding: 5px 20%;
+  }
+  .contact_me svg{
+    width:20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .second_resume {
+    margin-bottom: 25px;
+    padding: 0 20%;
+  }
+
+  footer a {
+    margin: 3px;
+  }
+
+  footer {
+    padding: 30px 10px;
+  }
+
+  .move_up {
+    width: 20px;
+    transform: translateY(10px);
   }
 }
 
@@ -197,7 +249,7 @@ footer {
   }
 
   body header {
-    padding: 20px;
+    padding: 15px;
     display: grid;
     width: 100%;
     justify-content: unset;
@@ -241,5 +293,26 @@ footer {
     border-style: solid;
     border-color: white;
   }
+
+  .container {
+    display: inline-block;
+  }
+
+  .my_picture{
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .contact_me svg{
+    width:30px;
+    height:30px;
+    margin: 0 10px;
+  }
+  footer h1{
+    font-size: 32px;
+  }
+  
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,19 +1,35 @@
 body {
   background: black;
+
   color: white;
   margin: 0;
   padding: 0;
   width: 100%;
   font-size: 14px;
   box-sizing: border-box;
+  /* mask-image: linear-gradient(to bottom, transparent, black);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black); */
+
+      
 }
 html {
   width: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 main {
   box-sizing: border-box;
+}
+
+.background {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+    width: -webkit-fill-available;
+  filter: blur(5px);
 }
 
 #toggler {
@@ -25,6 +41,7 @@ body header {
   background: rgba(0, 0, 0, 0.8);
   color: white;
   position: sticky;
+  z-index: 100;
   top: 0;
   left: 0;
   border-radius: 0px 0 20px 20px;
@@ -59,7 +76,15 @@ body header li,
 }
 .hidden {
   display: flex;
+  animation: slide_in 1s ease-out 1 normal;
 }
+
+.hidden ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
 .hidden li:not(.selected):hover {
   border-bottom: 2px solid rgb(153, 153, 153);
   color: rgb(153, 153, 153);
@@ -74,11 +99,19 @@ body header li,
   border-bottom: 3px solid rgb(255, 255, 255);
   padding: 5px 0px;
   font-weight: 900;
+  animation: slide_in 1s ease-out 1 normal;
 }
 
 .light_dark {
-  background: white;
+  background: rgba(255, 255, 255, 0);
   width: 50px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+.light {
+  width: 20px;
 }
 
 .resume_download {
@@ -91,17 +124,19 @@ body header li,
   cursor: grab;
 }
 
-.resume_download,.second_resume,.second_resume_download{
+.resume_download,
+.second_resume,
+.second_resume_download {
   display: flex;
   margin: 0 auto;
-    text-align: center;
+  text-align: center;
 }
-.resume_download img,.second_resume_download img {
+.resume_download img,
+.second_resume_download img {
   border-radius: 50%;
   width: 20px;
   margin-right: 5px;
 }
-
 
 .list {
   display: none;
@@ -151,9 +186,9 @@ main h1 {
    animation-timing-function: ease; */
 }
 
-.my_profile {
+/* .my_profile {
   animation: slide_in 2s ease-out 1 normal;
-}
+} */
 
 /* end of ABOUT ME */
 
@@ -261,11 +296,10 @@ footer a {
   .nav_toggler {
     display: block;
     float: right;
-    transform: translateY(-25px);
-  filter: invert(100%);
-  
+    transform: translateY(-30px);
+    filter: invert(100%);
   }
-  .nav_toggler img{
+  .nav_toggler img {
     width: 30px;
   }
 
@@ -284,6 +318,7 @@ footer a {
     align-items: center;
     text-align: center;
     cursor: pointer;
+    animation: slide_in 1s ease-out 1 normal;
   }
 
   .list {
@@ -299,6 +334,21 @@ footer a {
     display: block;
   }
 
+  .light_dark {
+    margin-left: 20px;
+  }
+
+  /* .close{
+  display: none;
+}
+  #toggler:checked ~ .more{
+ display: none;
+  }
+
+  #toggler:checked ~ .close{
+    display: block;
+  } */
+
   .selected {
     border: unset;
   }
@@ -307,14 +357,19 @@ footer a {
     display: block;
     border-left: 0;
     border-right: 0;
-    border-bottom: 0;
+    border-top: 0;
     padding: 15px;
-    border-top: 2px;
+    border-bottom: 2px;
     border-style: solid;
     border-color: white;
   }
-  .list li:last-child {
-    border-bottom: 2px;
+
+  .list li:first-child {
+    display: block;
+    border-left: 0;
+    border-right: 0;
+    padding: 15px;
+    border-top: 2px;
     border-style: solid;
     border-color: white;
   }
@@ -326,6 +381,10 @@ footer a {
   .my_picture {
     width: 50%;
     margin: 0 auto;
+  }
+
+  .resume_download {
+    margin-top: 15px;
   }
 }
 
@@ -344,7 +403,7 @@ footer a {
 @keyframes slide_in {
   0% {
     opacity: 0%;
-    transform: translateY(20px);
+    transform: translateY(5px);
   }
 
   100% {

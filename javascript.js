@@ -10,6 +10,7 @@ const move_up = document.querySelector(".move_up");
 const more = document.querySelector(".more");
 const cancel = document.querySelector(".close");
 const min_list = document.querySelector(".list");
+const background = document.querySelector('.background');
 
 body.style.backgroundColor = "black";
 light_dark.addEventListener("click", function () {
@@ -19,11 +20,15 @@ light_dark.addEventListener("click", function () {
     body.style.color = "white";
     move_up.src = "./icons8-up-48 (1).png";
     light.src = "./moon.png";
+    light.style = "box-shadow: 0px 0px 20px 1px white"
+    background.src = "./dark_background.jpg"
   } else if ((body.style.backgroundColor = "black")) {
     light.src = "./sun.png";
+    light.style = "box-shadow: 0px 0px 20px 1px #fcca38;"
     body.style.backgroundColor = "white";
     body.style.color = "black";
     move_up.src = "./icons8-up-48.png";
+    background.src = "./light_background.jpg"
   }
 });
 
@@ -109,15 +114,17 @@ function reveal() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+    var elementVisible = 100;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
     }
-    // else {
-    //   reveals[i].classList.remove("active");
-    // }
   }
 }
 
 window.addEventListener("scroll", reveal);
+
+var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel);

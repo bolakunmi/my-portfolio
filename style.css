@@ -9,8 +9,6 @@ body {
   box-sizing: border-box;
   /* mask-image: linear-gradient(to bottom, transparent, black);
   -webkit-mask-image: linear-gradient(to bottom, transparent, black); */
-
-      
 }
 html {
   width: 100%;
@@ -28,8 +26,8 @@ main {
   top: 0;
   left: 0;
   z-index: -2;
-    width: -webkit-fill-available;
-  filter: blur(5px);
+  width: -webkit-fill-available;
+  filter: blur(7px);
 }
 
 #toggler {
@@ -96,7 +94,8 @@ body header li,
 }
 
 .selected {
-  border-bottom: 3px solid rgb(255, 255, 255);
+  border-bottom: 3px solid white;
+  color: white;
   padding: 5px 0px;
   font-weight: 900;
   animation: slide_in 1s ease-out 1 normal;
@@ -112,12 +111,17 @@ body header li,
 
 .light {
   width: 20px;
+  box-shadow: 0px 0px 20px 1px white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
 .resume_download {
-  border-radius: 5px;
-  border: 1px white solid;
-  color: white;
+  border-radius: 7px;
+  border: 2px #8bd7f8 solid;
+  color: #8bd7f8;
   background: rgba(0, 0, 0, 0);
   padding: 10px 20px;
   font-size: 15px;
@@ -158,6 +162,10 @@ main h1 {
 /* body */
 
 /* about me */
+#about_me {
+  font-family: "Cabin", sans-serif;
+  text-transform: uppercase;
+}
 .container {
   display: -ms-grid;
   display: grid;
@@ -172,7 +180,9 @@ main h1 {
 }
 
 .my_picture img {
-  width: 100%;
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
 }
 
 .my_profile {
@@ -184,6 +194,14 @@ main h1 {
    animation-iteration-count: 1;
    animation-direction: normal;
    animation-timing-function: ease; */
+  line-height: 40px;
+  text-align: center;
+  font-family: "Encode Sans", sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* .my_profile {
@@ -196,6 +214,36 @@ main h1 {
 #projects {
   padding: 10px;
 }
+
+.my_carousel {
+  background: linear-gradient(to bottom, white, rgb(73, 97, 133));
+  color: black;
+  margin: 0 auto;
+  border-radius: 20px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 1px rgb(255, 255, 255);
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.project_item img {
+  max-height: 65vh;
+  margin: 0 auto;
+  max-width: 80vw;
+  border-radius: 20px;
+  padding-top: 10px;
+}
+
+.project_item {
+  display: flex;
+}
+.my_carousel_caption {
+  width: 80%;
+  margin: 0 auto;
+}
+/* END OF PROJECT */
 
 /* move up */
 .move_up {
@@ -212,7 +260,12 @@ main h1 {
 
 /* footer */
 .second_resume {
-  background: white;
+  background: linear-gradient(
+    145deg,
+    rgb(233, 255, 232),
+    rgb(197, 215, 255) 90%,
+    rgb(255, 240, 240)
+  );
   color: black;
   display: flex;
   flex-direction: column;

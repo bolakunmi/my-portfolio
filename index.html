@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" href="./carousel.scss"/> -->
-    <!-- <link rel="stylesheet" href="./carousel.css"> -->
+    <link rel="stylesheet" href="./carousel_style.css" />
     <link rel="icon" type="image/png" href="./bitmoji.png" />
 
     <title>Bolakunmi's portfolio</title>
   </head>
-  <!-- this is the home page, other pages should be in separate folders...i guess -->
+
   <body>
     <main>
       <header>
@@ -37,15 +36,11 @@
                 />download resume
               </button>
             </ul>
-
-            <!-- add the download image to the button -->
-            <!-- <img src="./icons8-download-24.png" alt="download icon"> -->
-            <!-- use sun and moon or an animated transition between light and dark -->
-            <!-- or look for a suspended lightbulb that can be clicked to switch on and off -->
           </span>
 
-          <label for="toggler"> <div class="nav_toggler"><img src="./more.png" class="more"></div></label>
-
+          <label for="toggler">
+            <div class="nav_toggler"><img src="./more.png" class="more" /></div
+          ></label>
         </nav>
         <input type="checkbox" id="toggler" />
         <ul class="list">
@@ -59,9 +54,9 @@
         </ul>
       </header>
       <br />
-      <img src="./New folder/pexels-photo (1).jpg" class="background" />
+      <img src="./dark_background.jpg" class="background" />
       <br />
-      <h1 id="about_me">welcome to my portfolio</h1>
+      <h1 id="about_me">welcome to my portfolio!</h1>
       <br />
       <!-- about me -->
       <div class="container">
@@ -70,11 +65,18 @@
           <!-- chnage the image to black and white -->
         </section>
         <section class="my_profile reveal">
-          my name is Bolakunmi Oluwayemi, a passionate and blah blah blah Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. In voluptate
-          cupiditate, fugiat, voluptatem, inventore explicabo laborum atque
-          laboriosam dicta esse dolore. Soluta repellendus error quaerat! Labore
-          accusantium est error iusto?
+          <span>Hello there, nice to meet you!</span>
+          <span>I am Bolakunmi Oluwayemi</span>
+          <span>
+            A problem solving, team spirited frontend developer currently based
+            in Oyo State, Nigeria.
+          </span>
+
+          <div>
+            I aim to use art and technology to solve user problems by delivering
+            tailored and impactful solutions that enhance their whole experience
+            on the web and beyond.
+          </div>
         </section>
       </div>
       <div class="move_up">
@@ -84,14 +86,101 @@
           alt="move up button"
         />
       </div>
+
       <div id="projects">
         <h1>projects</h1>
-        <div class="my_carousel">
-          <div>
-            <a href="">
-              
-            </a>
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide my_carousel"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active project_item">
+              <a href="https://citibimwebsite.netlify.app/" target="_blank">
+                <img
+                  src="./my_citibim_webpage.png"
+                  class="d-block w-100"
+                  alt="citibim website"
+                />
+              </a>
+
+              <div class="my_carousel_caption">
+                <h5>CitiBIM website</h5>
+                <p>
+                  A prototype website created for an organization explaing what
+                  their composition and services they offer
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item project_item">
+              <a href="https://keenesttodolist.netlify.app/" target="_blank">
+                <img
+                  src="./to_do_list.png"
+                  class="d-block w-100"
+                  alt="to-do list"
+                />
+              </a>
+              <div class="my_carousel_caption">
+                <h5>To-Do List</h5>
+                <p>a to-do list to organise your work</p>
+              </div>
+            </div>
+
+            <div class="carousel-item project_item">
+              <a href="https://keenestcalculator.netlify.app/" target="_blank">
+                <img
+                  src="./calculator.png"
+                  class="d-block w-100"
+                  alt="calculator"
+                />
+              </a>
+              <div class="my_carousel_caption">
+                <h5>calculator</h5>
+                <p>A Table top calculator for simple arithmetic calculations</p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
       <!-- end of about me -->
@@ -161,10 +250,6 @@
     <!-- wehkbfr -->
 
     <script src="javascript.js"></script>
-    <script src="carousel.js"></script>
+    <script src="./bootstrap.js"></script>
   </body>
 </html>
-
-<!-- use glassmorhpics or whatever for behimd the header, add more tranitions to the picture, name etc.
-
-make it seem more alive-->

@@ -366,6 +366,11 @@ footer a {
     transform: translateY(10px);
   }
 
+    .my_profile{
+    line-height: 18px;
+    font-size: 10px;
+  }
+
 
 
 }

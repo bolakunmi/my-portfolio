@@ -365,6 +365,9 @@ footer a {
     width: 20px;
     transform: translateY(10px);
   }
+
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -429,6 +432,11 @@ footer a {
     text-align: center;
     font-weight: 700;
     font-size: 10px;
+  }
+
+  .my_profile{
+    line-height: 24px;
+    font-size: 14px;
   }
 
   /* .close{

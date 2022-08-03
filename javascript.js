@@ -12,21 +12,21 @@ const cancel = document.querySelector(".close");
 const min_list = document.querySelector(".list");
 const background = document.querySelector('.background');
 
-body.style.backgroundColor = "black";
+body.style.backgroundColor = "rgb(27, 27, 27)";
 light_dark.addEventListener("click", function () {
-  if (body.style.backgroundColor == "white") {
+  if (body.style.backgroundColor == "rgb(216, 216, 216)") {
     // change the image src
-    body.style.backgroundColor = "black";
-    body.style.color = "white";
+    body.style.backgroundColor = "rgb(27, 27, 27)";
+    body.style.color = " rgb(216, 216, 216)";
     move_up.src = "./icons8-up-48 (1).png";
     light.src = "./moon.png";
-    light.style = "box-shadow: 0px 0px 20px 1px white"
+    light.style = "box-shadow: 0px 0px 20px 5px white"
     background.src = "./dark_background.jpg"
-  } else if ((body.style.backgroundColor = "black")) {
+  } else if ((body.style.backgroundColor = "rgb(27, 27, 27)")) {
     light.src = "./sun.png";
-    light.style = "box-shadow: 0px 0px 20px 1px #fcca38;"
-    body.style.backgroundColor = "white";
-    body.style.color = "black";
+    light.style = "box-shadow: 0px 0px 20px 5px #fcca38;"
+    body.style.backgroundColor = "rgb(216, 216, 216)";
+    body.style.color = "rgb(27, 27, 27)";
     move_up.src = "./icons8-up-48.png";
     background.src = "./light_background.jpg"
   }

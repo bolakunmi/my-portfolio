@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./carousel_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,600&family=Cinzel:wght@900&family=Courgette&family=Encode+Sans:wght@400;600&family=Inter:wght@400;500;700;900&family=Kaushan+Script&family=Lexend+Deca&family=PT+Sans:wght@700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="./bitmoji.png" />
 
     <title>Bolakunmi's portfolio</title>
@@ -24,16 +30,20 @@
         </div>
 
         <nav class="nav">
-          <span class="hidden">
+          <span class="hidden" style="letter-spacing: 1px">
             <ul>
               <li class="selected"><a href="#about_me">ABOUT ME</a></li>
               <li><a href="#projects">PROJECTS</a></li>
               <li><a href="#contact_me">CONTACT ME</a></li>
-              <button type="button" class="resume_download">
+              <button
+                type="button"
+                class="resume_download"
+                style="letter-spacing: 1px"
+              >
                 <img
                   src="./icons8-download-24.png"
                   alt="download icon"
-                />download resume
+                />Download Resume
               </button>
             </ul>
           </span>
@@ -47,16 +57,45 @@
           <li class="selected"><a href="#about_me">ABOUT ME</a></li>
           <li><a href="#projects">PROJECTS</a></li>
           <li><a href="#contact_me">CONTACT ME</a></li>
-          <button type="button" class="resume_download">
-            <img src="./icons8-download-24.png" alt="download icon" />download
-            resume
+          <button
+            type="button"
+            class="resume_download"
+            style="letter-spacing: 1px"
+          >
+            <img src="./icons8-download-24.png" alt="download icon" />Download
+            Resume
           </button>
         </ul>
       </header>
       <br />
       <img src="./dark_background.jpg" class="background" />
       <br />
-      <h1 id="about_me">welcome to my portfolio!</h1>
+      <p id="about_me" class="wavy">
+        <span style="--i: 1">W</span>
+        <span style="--i: 2">E</span>
+        <span style="--i: 3">L</span>
+        <span style="--i: 4">C</span>
+        <span style="--i: 5">O</span>
+        <span style="--i: 6">M</span>
+        <span style="--i: 7">E</span>
+        <span style="--i: 8"> </span>
+        <span style="--i: 9">T</span>
+        <span style="--i: 10">0</span>
+        <span style="--i: 11"> </span>
+        <span style="--i: 12">M</span>
+        <span style="--i: 13">Y</span>
+        <span style="--i: 14"> </span>
+        <span style="--i: 15">P</span>
+        <span style="--i: 16">O</span>
+        <span style="--i: 17">R</span>
+        <span style="--i: 18">T</span>
+        <span style="--i: 19">F</span>
+        <span style="--i: 20">O</span>
+        <span style="--i: 21">L</span>
+        <span style="--i: 22">I</span>
+        <span style="--i: 23">O</span>
+        <span style="--i: 24">!</span>
+      </p>
       <br />
       <!-- about me -->
       <div class="container">
@@ -66,14 +105,24 @@
         </section>
         <section class="my_profile reveal">
           <span>Hello there, nice to meet you!</span>
-          <span>I am Bolakunmi Oluwayemi</span>
+          <span style="transform: scale(1.2)"
+            >My name is
+            <words
+              style="
+                text-shadow: 7px 4px 20px white;
+                color: rgb(45, 163, 214);
+                font-weight: 600;
+              "
+              >Bolakunmi Oluwayemi</words
+            ></span
+          >
           <span>
-            A problem solving, team spirited frontend developer currently based
-            in Oyo State, Nigeria.
+            I am a problem-solving, goal-oriented frontend developer currently
+            based in Oyo State, Nigeria.
           </span>
 
-          <div>
-            I aim to use art and technology to solve user problems by delivering
+          <div >
+            I aim to use technology to solve user problems by delivering
             tailored and impactful solutions that enhance their whole experience
             on the web and beyond.
           </div>
@@ -188,10 +237,14 @@
       <!-- should it be download or view? -->
       <div class="second_resume">
         <div class="reveal">
-          <p>download my resume</p>
-          <button type="button" class="second_resume_download">
-            <img src="./resume_download.png" alt="download icon" />download
-            resume
+          <p>Have a Job for me?</p>
+          <button
+            type="button"
+            class="second_resume_download"
+            style="font-family: 'Roboto', sans-serif"
+          >
+            <img src="./resume_download.png" alt="download icon" />Download
+            Resume
           </button>
         </div>
       </div>

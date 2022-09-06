@@ -60,6 +60,8 @@ body header h1 {
 
 body header nav {
   float: right;
+  display: flex;
+  align-items: center;
 }
 
 body header li,
@@ -119,6 +121,7 @@ body header li,
   display: flex;
   align-items: center;
   align-content: center;
+  animation: glow 2s ease infinite alternate-reverse;
 }
 
 .resume_download {
@@ -137,6 +140,7 @@ body header li,
   display: flex;
   margin: 0 auto;
   text-align: center;
+  align-items: center;
 }
 .resume_download img,
 .second_resume_download img {
@@ -280,10 +284,11 @@ main h1 {
   width: 40px;
   border-radius: 50%;
   position: sticky;
-  left: 95%;
+  left: 90%;
   top: 90%;
   opacity: 70%;
   cursor: pointer;
+  z-index: 10000;
 }
 /* end of move up */
 /* end of body */
@@ -391,7 +396,6 @@ footer a {
   .nav_toggler {
     display: block;
     float: right;
-    transform: translateY(-30px);
     filter: invert(100%);
   }
   .nav_toggler img {
@@ -400,6 +404,14 @@ footer a {
 
   body header h1 {
     float: left;
+  }
+  body header nav {
+    float: right;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    right: 10px;
+    top: 15px;
   }
 
   body header {
@@ -413,13 +425,9 @@ footer a {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    animation: slide_in 1s ease-out 1 normal;
     font-family: "Alliance No.1", -apple-system, BlinkMacSystemFont, "Segoe UI",
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
-  }
-
-  .list {
     width: 100%;
     cursor: pointer;
     display: none;
@@ -427,14 +435,24 @@ footer a {
     padding: 0;
   }
 
+  .appear {
+    animation: appear 1s ease-out 1 normal;
+  }
+
+  .appear-container {
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
   #toggler:checked ~ .list {
     max-height: 100%;
     display: block;
   }
 
-  .light_dark {
-    margin-left: 20px;
-  }
+  /* #toggler:checked ~ .nav {
+position: fixed;
+top: 20px;
+right: 20px;
+  } */
 
   #about_me {
     font-family: "Cabin", sans-serif;
@@ -527,6 +545,16 @@ footer a {
   }
 }
 
+@keyframes appear {
+  0% {
+    transform: translateY(25px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
 
 .reveal {
@@ -556,19 +584,32 @@ footer a {
   animation-delay: calc(0.03s * var(--i));
 }
 
-.button_links {
-  display: flex;
-  justify-content: space-around;
-  text-decoration: none;
-  font-family: monospace;
-  font-weight: 900;
-  transform: translateY(-25px);
+.creep {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 2s steps(13) infinite alternate,
+    blink 800ms steps(13) infinite normal;
+  border-right: 3px solid black;
+  transform: scale(1.2);
+  text-transform: capitalize;
+  font-weight: 600;
 }
-
-.button_links button {
-  padding: 10px;
-  width: 100px;
-  text-decoration: none;
+@keyframes typewriter {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: black;
+  }
+  to {
+    border-color: transparent;
+  }
 }
 
 .experiences {
@@ -616,4 +657,168 @@ footer a {
   100% {
     transform: translateY(0px);
   }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0px 0px 10px 2px white;
+  }
+
+  100% {
+    box-shadow: 0px 0px 20px 5px white;
+  }
+}
+
+/* porject expanxiated */
+.project_explained:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.project_explained {
+  background: white;
+  border: 1px solid red;
+  padding: 20px;
+  display: flex;
+  margin: 5%;
+  border-radius: 15px;
+      font-family: "Alliance No.1", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.project_explained img {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.button_links {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 900;
+}
+
+.button_links button {
+  padding: 5px;
+  width: 70px;
+  text-decoration: none;
+  margin: 0 5px;
+  /* border: none;
+  background: unset; */
+}
+
+
+.btn-one {
+  color: red;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgb(224, 32, 32);
+  border-bottom-color: rgba(250, 19, 19, 0.788);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.13);
+}
+.btn-one:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+
+.project_explained_text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  flex-direction: column;
+  padding :20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.project_explained_text h5{
+  text-transform: uppercase;
+  margin: 0px 0;
+  font-size: 18px;
+}
+
+.project_explained_text p{
+  margin: 5px 0;
+
+}
+
+@media screen and (max-width: 768px) {
+.project_explained{
+  padding: 15px;
+  margin: 15px;
+}
+
+  .project_explained_text{
+    font-size: 10px;
+line-height: 13px;
+padding: 10px;
+  }
+
+.button_links {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 900;
+}
+
+.button_links button {
+  padding: 3px;
+  width: 40px;
+  text-decoration: none;
+  margin: 0 2px;
+  font-size: 10px;
+  /* border: none;
+  background: unset; */
+}
+
+  .project_explained_text h5{
+    font-size: 13px;
+line-height: 13px;
+
+  }
+
+}
+
+*{
+  box-sizing: border-box;
 }

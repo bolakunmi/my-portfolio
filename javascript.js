@@ -13,66 +13,55 @@ const min_list = document.querySelector(".list");
 const background = document.querySelector('.background');
 
 body.style.backgroundColor = "rgb(27, 27, 27)";
-light_dark.addEventListener("click", function () {
-  if (body.style.backgroundColor == "rgb(216, 216, 216)") {
-    // change the image src
-    body.style.backgroundColor = "rgb(27, 27, 27)";
-    body.style.color = " rgb(216, 216, 216)";
-    move_up.src = "./icons8-up-48 (1).png";
-    light.src = "./moon.png";
-    light.style = "box-shadow: 0px 0px 20px 5px white"
-    background.src = "./dark_background.jpg"
-  } else if ((body.style.backgroundColor = "rgb(27, 27, 27)")) {
-    light.src = "./sun.png";
-    light.style = "box-shadow: 0px 0px 20px 5px #fcca38;"
-    body.style.backgroundColor = "rgb(216, 216, 216)";
-    body.style.color = "rgb(27, 27, 27)";
-    move_up.src = "./icons8-up-48.png";
-    background.src = "./light_background.jpg"
+
+const styleLink = document.querySelector('#style')
+
+light_dark.addEventListener('click', function () {
+
+  if (styleLink.getAttribute('href') == 'style.css') {
+    styleLink.setAttribute('href', 'style2.css');
+    localStorage.clear()
+    localStorage.setItem('mode', 'light')
+
+  } else {
+    styleLink.setAttribute('href', 'style.css');
+    localStorage.clear()
+    localStorage.setItem('mode', 'dark')
+
   }
-});
+})
+
+if (localStorage.getItem('mode') == 'dark') {
+  styleLink.setAttribute('href', 'style.css');
+} else {
+  styleLink.setAttribute('href', 'style2.css');
+}
+
+
+
+// light_dark.addEventListener("click", function () {
+//   if (body.style.backgroundColor == "rgb(216, 216, 216)") {
+//     // change the image src
+//     body.style.backgroundColor = "rgb(27, 27, 27)";
+//     body.style.color = " rgb(216, 216, 216)";
+//     move_up.src = "./icons8-up-48 (1).png";
+//     light.src = "./moon.png";
+//     light.style = "box-shadow: 0px 0px 20px 5px white"
+//     background.src = "./dark_background.jpg"
+//   } else if ((body.style.backgroundColor = "rgb(27, 27, 27)")) {
+//     light.src = "./sun.png";
+//     light.style = "box-shadow: 0px 0px 20px 5px #fcca38;"
+//     body.style.backgroundColor = "rgb(216, 216, 216)";
+//     body.style.color = "rgb(27, 27, 27)";
+//     move_up.src = "./icons8-up-48.png";
+//     background.src = "./light_background.jpg"
+//   }
+// });
 
 move_up.addEventListener("click", function () {
   window.scrollTo(0, 0);
 });
 
-// toggler display for nav bar
-// nav_list.style.display = "none";
-// nav_toggler.addEventListener("click", function () {
-//   if (nav_list.style.display == "none") {
-//     console.log("visible");
-//     nav_list.style.display = "block";
-//   } else if (nav_list.style.display == "block") {
-//     console.log("hidden");
-//     if (window.innerWidth < 800) {
-//       nav_list.style.display = "none";
-//     } else {
-//       nav_list.style.display = "block";
-//     }
-//   }
-// });
-
-// nav_toggler_img.addEventListener("click", function () {
-//   if (nav_toggler_img.src = "./more.png") {
-//     nav_toggler_img.src = "./close.png"
-//     console.log('close')
-
-//   } else if (nav_toggler_img.src = "./close.png") {
-//     nav_toggler_img.src = "./more.png"
-//     console.log('display')
-//   }
-// })
-
-/* nav_toggler.addEventListener("click", function () {
-if (nav_toggler.backgroundColor = url("./more.png")) {
-  nav_toggler.backgroundColor = url("./close.png")
-  console.log('close')
-
-} else if (nav_toggler.backgroundColor = url("./more.png")) {
-  nav_toggler.backgroundColor = url("./more.png")
-  console.log('display more')
-}
-})*/
 
 // to jump around selected items
 for (let i = 0; i < 3; i++) {
@@ -93,20 +82,7 @@ for (let i = 0; i < 3; i++) {
   });
 }
 
-// let options = "more"
-// nav_toggler_img.addEventListener("click", function () {
-//   if (options == "more") {
-//     more.style.src = "./more.png"
-//     console.log(options)
-//     options = "close";
-//   } else if (options == "close") {
-//     more.style.src = "./close.png"
 
-//     console.log("it shoudl go back")
-//     options = "more"
-//   }
-
-// })
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");

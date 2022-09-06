@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link id="style" rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./carousel_style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,12 +21,7 @@
     <main>
       <header>
         <div>
-          <h1>
-            KEENEST
-            <button type="button" class="light_dark">
-              <img src="./moon.png" alt="light" class="light" />
-            </button>
-          </h1>
+          <h1>KEENEST</h1>
         </div>
 
         <nav class="nav">
@@ -38,7 +33,7 @@
               <button
                 type="button"
                 class="resume_download"
-                style="letter-spacing: 1px"
+                style="letter-spacing: 1px; align-items: center"
               >
                 <img
                   src="./icons8-download-24.png"
@@ -48,23 +43,58 @@
             </ul>
           </span>
 
-          <label for="toggler">
-            <div class="nav_toggler"><img src="./more.png" class="more" /></div
-          ></label>
+          <div style="display: flex">
+            <button type="button" class="light_dark">
+              <img src="./moon.png" alt="light" class="light" />
+            </button>
+            <label for="toggler">
+              <div class="nav_toggler">
+                <img src="./more.png" class="more" style="display: flex" /></div
+            ></label>
+          </div>
         </nav>
         <input type="checkbox" id="toggler" />
 
         <ul class="list">
-          <li class="selected"><a href="#about_me">ABOUT ME</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#contact_me">CONTACT ME</a></li>
+          <li class="selected">
+            <div class="appear-container">
+              <div class="appear"><a href="#about_me">ABOUT ME</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="appear-container">
+              <div class="appear">
+                <a href="#projects">PROJECTS</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="appear-container">
+              <div class="appear">
+                <a href="#contact_me">CONTACT ME</a>
+              </div>
+            </div>
+          </li>
           <button
             type="button"
-            class="resume_download"
+            class="resume_download appear-container"
             style="letter-spacing: 1px"
           >
-            <img src="./icons8-download-24.png" alt="download icon" />Download
-            Resume
+            <div class="appear">
+              <a
+                href="./Bolakunmi Oluwayemi Resume.pdf"
+                download="Bolakunmi Oluwayemi Resume.pdf"
+                target="_blank"
+                style="display: flex; align-items: center"
+              >
+                <img
+                  src="./icons8-download-24.png"
+                  alt="download icon"
+                />Download Resume
+              </a>
+            </div>
+
+            <!-- tremeber to visit this!!!! -->
           </button>
         </ul>
       </header>
@@ -118,8 +148,9 @@
             ></span
           >
           <span>
-            I am a problem-solving, goal-oriented frontend developer currently
-            based in Oyo State, Nigeria.
+            I am a problem-solving, goal-oriented
+            <p class="creep">frontend developer</p>
+            currently based in Oyo State, Nigeria.
           </span>
 
           <div>
@@ -212,12 +243,12 @@
                     href="https://keenesttodolist.netlify.app/"
                     target="_blank"
                   >
-                    <button type="button">Live</button>
+                    <button type="button" class="btn-one ">Live</button>
                   </a>
                   <a
                     href="https://github.com/bolakunmi/to-do-list"
                     target="_blank"
-                    ><button type="button">Github</button>
+                    ><button type="button" class="btn-one ">Github</button>
                   </a>
                 </div>
               </div>
@@ -235,17 +266,17 @@
                   A Table top calculator for simple arithmetic calculations
                   built with HTML, CSS and JavaScript
                 </p>
-                <div class="button_links">
+                <div class="button_links" >
                   <a
                     href="https://keenestcalculator.netlify.app/"
                     target="_blank"
                   >
-                    <button type="button">Live</button>
+                    <button type="button" class="btn-one ">Live</button>
                   </a>
                   <a
                     href="https://github.com/bolakunmi/calculator"
                     target="_blank"
-                    ><button type="button">Github</button>
+                    ><button type="button" class="btn-one ">Github</button>
                   </a>
                 </div>
               </div>
@@ -271,6 +302,95 @@
         </div>
       </div>
       <!-- end of about me -->
+
+      <div class="second_project_container">
+        <div class="project_explained">
+          
+            <img
+              src="./my_citibim_webpage.png"
+              class="d-block w-100"
+              alt="citibim website"
+            />
+          
+          <div class="project_explained_text">
+            <h5>CitiBIM website</h5>
+            <p>
+              An informative website for an organization created with HTML, CSS
+              and JavaScript.
+            </p>
+            <div class="button_links">
+              <a href="https://citibimwebsite.netlify.app/" target="_blank">
+                <button type="button" class="btn-one ">Live</button>
+              </a>
+              <a
+                href="https://github.com/bolakunmi/citiBIM-website"
+                target="_blank"
+                ><button type="button" class="btn-one ">Github</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project_explained">
+          
+            <img
+              src="./to_do_list.png"
+              class="d-block w-100"
+              alt="to-do list"
+            />
+          
+          <div class="project_explained_text">
+            <h5>To-Do List</h5>
+            <p>
+              a to-do list to organise your work. it is built with HTML, CSS and
+              JavaScript
+            </p>
+            <div class="button_links">
+              <a href="https://keenesttodolist.netlify.app/" target="_blank">
+                <button type="button" class="btn-one ">Live</button>
+              </a>
+              <a href="https://github.com/bolakunmi/to-do-list" target="_blank"
+                ><button type="button" class="btn-one ">Github</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project_explained">
+          
+            <img
+              src="./calculator.png"
+              class="d-block w-100"
+              alt="calculator"
+            />
+          
+          <div class="project_explained_text">
+            <h5>calculator</h5>
+            <p>
+              A Table top calculator for simple arithmetic calculations built
+              with HTML, CSS and JavaScript
+            </p>
+            <div class="button_links">
+              <a href="https://keenestcalculator.netlify.app/" target="_blank">
+                <button type="button" class="btn-one ">Live</button>
+              </a>
+              <a href="https://github.com/bolakunmi/calculator" target="_blank"
+                ><button type="button" class="btn-one ">Github</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project_explained" style="display: none">
+          <div>
+            <!-- image -->
+          </div>
+          <div>
+            <!--  -->
+          </div>
+        </div>
+        
+      </div>
 
       <div class="experience_container">
         <h1>Experiences</h1>
@@ -318,7 +438,6 @@
           <li>innovative</li>
           <li>hardworking</li>
           <li>resilient</li>
-          
         </ul>
       </div>
 

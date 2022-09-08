@@ -22,18 +22,32 @@ light_dark.addEventListener('click', function () {
     styleLink.setAttribute('href', 'style2.css');
     localStorage.clear()
     localStorage.setItem('mode', 'light')
+    light.src = "./sun.png";
+    light.style = "box-shadow: 0px 0px 20px 5px #fcca38;"
+    body.style.backgroundColor = "rgb(216, 216, 216)";
+    body.style.color = "rgb(27, 27, 27)";
+    move_up.src = "./icons8-up-48.png";
+    background.src = "./light_background.jpg"
 
   } else {
     styleLink.setAttribute('href', 'style.css');
     localStorage.clear()
     localStorage.setItem('mode', 'dark')
+    body.style.backgroundColor = "rgb(27, 27, 27)";
+    body.style.color = " rgb(216, 216, 216)";
+    move_up.src = "./icons8-up-48 (1).png";
+    light.src = "./moon.png";
+    light.style = "box-shadow: 0px 0px 20px 5px white"
+    background.src = "./dark_background.jpg"
 
   }
 })
 
 if (localStorage.getItem('mode') == 'dark') {
   styleLink.setAttribute('href', 'style.css');
+
 } else {
+
   styleLink.setAttribute('href', 'style2.css');
 }
 

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="style" rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./carousel_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,600&family=Cinzel:wght@900&family=Courgette&family=Encode+Sans:wght@400;600&family=Inter:wght@400;500;700;900&family=Kaushan+Script&family=Lexend+Deca&family=PT+Sans:wght@700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./bitmoji.png" />
+
+    <title>Bolakunmi's portfolio</title>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>KEENEST</h1>
+        </div>
+
+        <nav class="nav">
+          <span class="hidden" style="letter-spacing: 1px">
+            <ul>
+              <li class="selected"><a href="#about_me">ABOUT ME</a></li>
+              <li><a href="#projects">PROJECTS</a></li>
+              <li><a href="#contact_me">CONTACT ME</a></li>
+              <button
+                type="button"
+                class="resume_download"
+                style="letter-spacing: 1px; align-items: center"
+              >
+                <img
+                  src="./icons8-download-24.png"
+                  alt="download icon"
+                />Download Resume
+              </button>
+            </ul>
+          </span>
+
+          <div style="display: flex">
+            <button type="button" class="light_dark">
+              <img src="./moon.png" alt="light" class="light" />
+            </button>
+            <label for="toggler">
+              <div class="nav_toggler">
+                <img src="./more.png" class="more" style="display: flex" /></div
+            ></label>
+          </div>
+        </nav>
+        <input type="checkbox" id="toggler" />
+
+        <ul class="list">
+          <li class="selected">
+            <div class="appear-container">
+              <div class="appear"><a href="#about_me">ABOUT ME</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="appear-container">
+              <div class="appear">
+                <a href="#projects">PROJECTS</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="appear-container">
+              <div class="appear">
+                <a href="#contact_me">CONTACT ME</a>
+              </div>
+            </div>
+          </li>
+          <button
+            type="button"
+            class="resume_download appear-container"
+            style="letter-spacing: 1px"
+          >
+            <div class="appear">
+              <a
+                href="./Bolakunmi Oluwayemi Resume.pdf"
+                download="Bolakunmi Oluwayemi Resume.pdf"
+                target="_blank"
+                style="display: flex; align-items: center"
+              >
+                <img
+                  src="./icons8-download-24.png"
+                  alt="download icon"
+                />Download Resume
+              </a>
+            </div>
+
+            <!-- tremeber to visit this!!!! -->
+          </button>
+        </ul>
+      </header>
+      <br />
+      <img src="./dark_background.jpg" class="background" />
+      <br />
+      <p id="about_me" class="wavy">
+        <span style="--i: 1">W</span>
+        <span style="--i: 2">E</span>
+        <span style="--i: 3">L</span>
+        <span style="--i: 4">C</span>
+        <span style="--i: 5">O</span>
+        <span style="--i: 6">M</span>
+        <span style="--i: 7">E</span>
+        <span style="--i: 8"> </span>
+        <span style="--i: 9">T</span>
+        <span style="--i: 10">0</span>
+        <span style="--i: 11"> </span>
+        <span style="--i: 12">M</span>
+        <span style="--i: 13">Y</span>
+        <span style="--i: 14"> </span>
+        <span style="--i: 15">P</span>
+        <span style="--i: 16">O</span>
+        <span style="--i: 17">R</span>
+        <span style="--i: 18">T</span>
+        <span style="--i: 19">F</span>
+        <span style="--i: 20">O</span>
+        <span style="--i: 21">L</span>
+        <span style="--i: 22">I</span>
+        <span style="--i: 23">O</span>
+        <span style="--i: 24">!</span>
+      </p>
+      <br />
+      <!-- about me -->
+      <div class="container">
+        <section class="my_picture">
+          <img src="./my_picture2.png" alt="my image" />
+          <!-- chnage the image to black and white -->
+        </section>
+        <section class="my_profile reveal">
+          <span>Hello there, nice to meet you!</span>
+          <span style="transform: scale(1.2)"
+            >My name is
+            <words
+              style="
+                text-shadow: 7px 4px 20px white;
+                color: rgb(45, 163, 214);
+                font-weight: 600;
+              "
+              >Bolakunmi Oluwayemi</words
+            ></span
+          >
+          <span>
+            I am a problem-solving, goal-oriented
+            <p class="creep">frontend developer</p>
+            currently based in Oyo State, Nigeria.
+          </span>
+
+          <div>
+            I aim to use technology to solve user problems by delivering
+            tailored and impactful solutions that enhance their whole experience
+            on the web and beyond.
+          </div>
+        </section>
+      </div>
+      <div class="move_up">
+        <img
+          src="./icons8-up-48 (1).png"
+          class="move_up"
+          alt="move up button"
+        />
+      </div>
+
+      <div id="projects">
+        <h1>projects</h1>
+
+        <div class="background_slide">
+
+        </div>
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide my_carousel"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active project_item">
+              <img
+                src="./slide1.png"
+                class="d-block w-100"
+                alt="citibim website"
+              />
+
+              <!-- <div class="my_carousel_caption">
+                <h5>CitiBIM website</h5>
+                <p>
+                  An informative website for an organization created with HTML,
+                  CSS and JavaScript.
+                </p>
+                <div class="button_links">
+                  <a href="https://citibimwebsite.netlify.app/" target="_blank">
+                    <button type="button">Live</button>
+                  </a>
+                  <a
+                    href="https://github.com/bolakunmi/citiBIM-website"
+                    target="_blank"
+                    ><button type="button">Github</button>
+                  </a>
+                </div>
+              </div> -->
+            </div>
+
+            <div class="carousel-item project_item">
+              <img
+                src="./slide2.png"
+                class="d-block w-100"
+                alt="to-do list"
+              />
+
+              <!-- <div class="my_carousel_caption">
+                <h5>To-Do List</h5>
+                <p>
+                  a to-do list to organise your work. it is built with HTML, CSS
+                  and JavaScript
+                </p>
+                <div class="button_links">
+                  <a
+                    href="https://keenesttodolist.netlify.app/"
+                    target="_blank"
+                  >
+                    <button type="button" class="btn-one ">Live</button>
+                  </a>
+                  <a
+                    href="https://github.com/bolakunmi/to-do-list"
+                    target="_blank"
+                    ><button type="button" class="btn-one ">Github</button>
+                  </a>
+                </div>
+              </div> -->
+            </div>
+
+            <div class="carousel-item project_item">
+              <img
+                src="./slide3.png"
+                class="d-block w-100"
+                alt="calculator"
+              />
+              <!-- <div class="my_carousel_caption">
+                <h5>calculator</h5>
+                <p>
+                  A Table top calculator for simple arithmetic calculations
+                  built with HTML, CSS and JavaScript
+                </p>
+                <div class="button_links" >
+                  <a
+                    href="https://keenestcalculator.netlify.app/"
+                    target="_blank"
+                  >
+                    <button type="button" class="btn-one ">Live</button>
+                  </a>
+                  <a
+                    href="https://github.com/bolakunmi/calculator"
+                    target="_blank"
+                    ><button type="button" class="btn-one ">Github</button>
+                  </a>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <!-- end of about me -->
+
+      <div class="second_project_container">
+        <div class="project_explained">
+          
+            <img
+              src="./my_citibim_webpage.png"
+              class="d-block w-100"
+              alt="citibim website"
+            />
+          
+          <div class="project_explained_text">
+            <h5>CitiBIM website</h5>
+            <p>
+              An informative website for an organization created with HTML, CSS
+              and JavaScript.
+            </p>
+            <div class="button_links">
+              <a href="https://citibimwebsite.netlify.app/" target="_blank">
+                <button type="button" class="btn-one ">Live</button>
+              </a>
+              <a
+                href="https://github.com/bolakunmi/citiBIM-website"
+                target="_blank"
+                ><button type="button" class="btn-one ">Github</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project_explained">
+          
+            <img
+              src="./to_do_list.png"
+              class="d-block w-100"
+              alt="to-do list"
+            />
+          
+          <div class="project_explained_text">
+            <h5>To-Do List</h5>
+            <p>
+              a to-do list to organise your work. it is built with HTML, CSS and
+              JavaScript
+            </p>
+            <div class="button_links">
+              <a href="https://keenesttodolist.netlify.app/" target="_blank">
+                <button type="button" class="btn-one ">Live</button>
+              </a>
+              <a href="https://github.com/bolakunmi/to-do-list" target="_blank"
+                ><button type="button" class="btn-one ">Github</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project_explained">
+          
+            <img
+              src="./calculator.png"
+              class="d-block w-100"
+              alt="calculator"
+            />
+          
+          <div class="project_explained_text">
+            <h5>calculator</h5>
+            <p>
+              A Table top calculator for simple arithmetic calculations built
+              with HTML, CSS and JavaScript
+            </p>
+            <div class="button_links">
+              <a href="https://keenestcalculator.netlify.app/" target="_blank">
+                <button type="button" class="btn-one ">Live</button>
+              </a>
+              <a href="https://github.com/bolakunmi/calculator" target="_blank"
+                ><button type="button" class="btn-one ">Github</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project_explained" style="display: none">
+          <div>
+            <!-- image -->
+          </div>
+          <div>
+            <!--  -->
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="experience_container">
+        <h1>Experiences</h1>
+        <div class="experiences">
+          <div>
+            <img src="./experiences2/html.svg" alt="html" />
+            <div>HTML</div>
+          </div>
+          <div>
+            <img src="./experiences2/css.svg" alt="css" />
+            <div>CSS</div>
+          </div>
+          <div>
+            <img src="./experiences2/js.svg" alt="js" />
+            <div>JavaScript</div>
+          </div>
+          <div>
+            <img src="./experiences2/bootstrap.png" alt="bootstrap" />
+            <div>Bootstrap</div>
+          </div>
+          <div>
+            <img src="./experiences2/react.svg" alt="react" />
+            <div>React</div>
+          </div>
+          <div>
+            <img src="./experiences2/nodejs.png" alt="nodejs" />
+            <div>NodeJs</div>
+          </div>
+
+          <div>
+            <img src="./experiences2/github.svg" alt="github" />
+            <div>github</div>
+          </div>
+          <div>
+            <img src="./experiences2/sass.svg" alt="scss" />
+            <div>SCSS</div>
+          </div>
+        </div>
+      </div>
+      <div class="skills">
+        <h1>My skills</h1>
+        <ul>
+          <li>creativity</li>
+          <li>solution provider</li>
+          <li>innovative</li>
+          <li>hardworking</li>
+          <li>resilient</li>
+        </ul>
+      </div>
+
+      <!-- should it be download or view? -->
+      <div class="second_resume">
+        <div class="reveal">
+          <p>Have a Job for me?</p>
+          <button
+            type="button"
+            class="second_resume_download"
+            style="font-family: 'Roboto', sans-serif"
+          >
+            <img src="./resume_download.png" alt="download icon" />Download
+            Resume
+          </button>
+        </div>
+      </div>
+
+      <footer id="contact_me">
+        <div>
+          <h1>KEENEST</h1>
+        </div>
+        <div class="contact_me" id="contact_me">
+          <a
+            href="https://ng.linkedin.com/in/bolakunmi-oluwayemi-486727195?challengeId=AQGOEWQP2baBRwAAAYALM9AsUOw1AwHvBqinH28121GIFIons_SHI375nUOB4E2eV84O8MvG-Wyi_p5lBz7SHokPFRVQ968j4A&submissionId=fb6cf047-ef0a-e416-23de-981b43800810"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-linkedin"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+              /></svg
+          ></a>
+          <a href="https://twitter.com/keenest11" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-twitter"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+              /></svg
+          ></a>
+          <a href="https://github.com/bolakunmi" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-github"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              /></svg
+          ></a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- wehkbfr -->
+
+    <script src="javascript.js"></script>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>

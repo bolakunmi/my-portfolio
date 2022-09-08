@@ -37,7 +37,7 @@ main {
 body header {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: rgba(225,225,225,0.9);
   position: sticky;
   z-index: 100;
   top: 0;
@@ -71,7 +71,7 @@ body header li,
   display: inline;
   margin: 0 7px;
   text-decoration: none;
-  color: white;
+  color: rgba(225,225,225,0.9);
   cursor: pointer;
 }
 .hidden {
@@ -100,7 +100,7 @@ body header li,
 
 .selected {
   border-bottom: 3px solid white;
-  color: white;
+  color: rgba(225,225,225,0.9);
   padding: 5px 0px;
   font-weight: 500;
   animation: slide_in 1s ease-out 1 normal;
@@ -127,7 +127,7 @@ body header li,
 .resume_download {
   border-radius: 7px;
   border: 2px white solid;
-  color: white;
+  color: rgba(225,225,225,0.9);
   background: rgba(0, 0, 0, 0);
   padding: 10px 20px;
   font-size: 15px;
@@ -221,9 +221,9 @@ main h1 {
 /* end of ABOUT ME */
 
 /* PROJECT */
-#projects {
+/* #projects {
   padding: 10px;
-}
+} */
 
 #projects h1,
 .experience_container h1,
@@ -236,23 +236,26 @@ main h1 {
 }
 
 .my_carousel {
-  background: linear-gradient(310deg, rgb(224, 224, 224), rgb(162, 199, 255));
-  color: black;
+    background: rgb(202 202 202 / 17%);
+    backdrop-filter: blur(3px);
+  /* background: linear-gradient(310deg, rgb(224, 224, 224), rgb(162, 199, 255)); */
+  /* background: none; */
+  color: rgba(0,0,0,0.9);
   margin: 0 auto;
-  border-radius: 20px;
-  width: 90%;
+  /* border-radius: 20px; */
+  width: 100%;
   display: flex;
   justify-content: center;
   /* box-shadow: 0px 0px 10px 1px rgb(255, 255, 255); */
-  padding: 5px;
-  border: 1px solid black;
+  /* padding: 5px; */
+  /* border: 1px solid black; */
 }
 
 .project_item img {
   max-height: 65vh;
   margin: 0 auto;
-  max-width: 80vw;
-  padding-top: 30px;
+  max-width: 100%;
+  padding-top: 0px;
 }
 
 .project_item {
@@ -271,7 +274,7 @@ main h1 {
 .my_carousel_caption h5 {
   font-size: 18px;
   font-weight: 700;
-  color: black;
+  color: rgba(0,0,0,0.9);
 }
 
 .my_carousel_caption p {
@@ -301,7 +304,7 @@ main h1 {
     rgb(197, 215, 255) 90%,
     rgb(255, 240, 240)
   );
-  color: black;
+  color: rgba(0,0,0,0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,7 +321,7 @@ main h1 {
 }
 
 .second_resume_download {
-  color: black;
+  color: rgba(0,0,0,0.9);
   margin-bottom: 10px;
 
   border-radius: 5px;
@@ -331,13 +334,13 @@ main h1 {
 }
 footer {
   background: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: rgba(225,225,225,0.9);
   display: flex;
   justify-content: space-between;
   padding: 50px 30px;
 }
 footer a {
-  color: white;
+  color: rgba(225,225,225,0.9);
   margin: 10px;
 }
 
@@ -359,7 +362,7 @@ footer a {
 @media screen and (max-width: 480px) {
   .second_resume {
     margin-bottom: 25px;
-    padding: 0 20%;
+    padding: 0 15%;
   }
 
   footer a {
@@ -379,6 +382,7 @@ footer a {
     line-height: 18px;
     font-size: 10px;
   }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -490,7 +494,7 @@ right: 20px;
     padding: 15px;
     border-bottom: 2px;
     border-style: solid;
-    border-color: white;
+    border-color: rgba(225,225,225,0.9);
   }
 
   .list li:first-child {
@@ -500,7 +504,7 @@ right: 20px;
     padding: 15px;
     border-top: 2px;
     border-style: solid;
-    border-color: white;
+    border-color: rgba(225,225,225,0.9);
   }
 
   .container {
@@ -516,9 +520,9 @@ right: 20px;
     margin-top: 15px;
   }
 
-  .project_item img {
+  /* .project_item img {
     padding-top: 20px;
-  }
+  } */
 }
 
 @media screen and (min-width: 768px) {
@@ -578,7 +582,8 @@ right: 20px;
   position: relative;
   display: inline-block;
   color: #fff;
-  font-size: 2em;
+  font-size: 1.8em;
+  font-weight: 700;
   text-transform: uppercase;
   animation: animate 2s ease-in-out infinite;
   animation-delay: calc(0.03s * var(--i));
@@ -605,7 +610,7 @@ right: 20px;
 }
 @keyframes blink {
   from {
-    border-color: black;
+    border-color: rgba(0,0,0,0.9);
   }
   to {
     border-color: transparent;
@@ -676,19 +681,21 @@ right: 20px;
 }
 
 .project_explained {
-  background: white;
-  border: 1px solid red;
+  background: rgba(201, 201, 201, 0.692);
+  /* border: 1px solid red; */
   padding: 20px;
   display: flex;
   margin: 5%;
   border-radius: 15px;
-      font-family: "Alliance No.1", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Alliance No.1", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
 .project_explained img {
   width: 60%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid black;
 }
 
@@ -698,6 +705,8 @@ right: 20px;
   text-decoration: none;
   font-family: monospace;
   font-weight: 900;
+      margin-top: 10px;
+      width: 100%;
 }
 
 .button_links button {
@@ -709,9 +718,8 @@ right: 20px;
   background: unset; */
 }
 
-
 .btn-one {
-  color: red;
+  color: rgba(0,0,0,0.9);
   transition: all 0.3s;
   position: relative;
 }
@@ -719,7 +727,7 @@ right: 20px;
   transition: all 0.3s;
 }
 .btn-one::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -740,11 +748,11 @@ right: 20px;
   letter-spacing: 2px;
 }
 .btn-one:hover::before {
-  opacity: 1; 
-  transform: scale(1, 1); 
+  opacity: 1;
+  transform: scale(1, 1);
 }
 .btn-one::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -755,70 +763,75 @@ right: 20px;
   background-color: rgba(255, 255, 255, 0.13);
 }
 .btn-one:hover::after {
-  opacity: 0; 
+  opacity: 0;
   transform: scale(0.1, 1);
 }
 
-.project_explained_text{
+.project_explained_text {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  color: rgba(0,0,0,0.9);
   flex-direction: column;
-  padding :20px;
+  padding: 20px;
   font-size: 14px;
   line-height: 20px;
+  text-align: center;
+  margin: 5px 0;
 }
 
-.project_explained_text h5{
+.project_explained_text h5 {
   text-transform: uppercase;
   margin: 0px 0;
   font-size: 18px;
 }
 
-.project_explained_text p{
+.project_explained_text p {
   margin: 5px 0;
-
 }
 
 @media screen and (max-width: 768px) {
-.project_explained{
-  padding: 15px;
-  margin: 15px;
-}
+  .project_explained,
+  .project_explained:nth-child(even) {
+    flex-direction: column;
+    padding: 15px;
+    margin: 15px;
+  }
+  .project_explained img {
+    width: 100%;
+  }
 
   .project_explained_text{
-    font-size: 10px;
-line-height: 13px;
+    /* font-size: 10px;
+line-height: 13px; */
 padding: 10px;
   }
 
-.button_links {
-  display: flex;
-  justify-content: space-around;
-  text-decoration: none;
-  font-family: monospace;
-  font-weight: 900;
-}
-
-.button_links button {
-  padding: 3px;
-  width: 40px;
-  text-decoration: none;
-  margin: 0 2px;
-  font-size: 10px;
-  /* border: none;
-  background: unset; */
-}
-
-  .project_explained_text h5{
-    font-size: 13px;
-line-height: 13px;
-
+  .button_links {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    /* font-family: monospace; */
+    font-weight: 900;
+    width: 100%;
   }
 
+  .button_links button {
+    padding: 3px;
+    text-decoration: none;
+
+
+  }
+  /* 
+  .project_explained_text h5{
+    font-size: 15px;
+line-height: 13px;
+
+  } */
 }
 
-*{
+* {
   box-sizing: border-box;
 }
+
+

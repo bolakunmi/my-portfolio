@@ -10,72 +10,51 @@ const move_up = document.querySelector(".move_up");
 const more = document.querySelector(".more");
 const cancel = document.querySelector(".close");
 const min_list = document.querySelector(".list");
-const background = document.querySelector('.background');
+const background = document.querySelector(".background");
+const styleLink = document.getElementById("style");
 
-body.style.backgroundColor = "rgb(27, 27, 27)";
 
-const styleLink = document.querySelector('#style')
+let lightMode = () => {
+  styleLink.setAttribute("href", "style2.css");
+  light.src = "./sun.png";
+  light.style = "box-shadow: 0px 0px 20px 5px #fcca38;";
+  body.style.backgroundColor = "rgb(216, 216, 216)";
+  body.style.color = "rgb(27, 27, 27)";
+  move_up.src = "./icons8-up-48.png";
+  background.src = "./light_background.jpg";
+};
+let darkMode = () => {
+  styleLink.setAttribute("href", "style.css");
+  body.style.backgroundColor = "rgb(27, 27, 27)";
+  body.style.color = " rgb(216, 216, 216)";
+  move_up.src = "./icons8-up-48 (1).png";
+  light.src = "./moon.png";
+  light.style = "box-shadow: 0px 0px 20px 5px white";
+  background.src = "./dark_background.jpg";
+};
 
-light_dark.addEventListener('click', function () {
-
-  if (styleLink.getAttribute('href') == 'style.css') {
-    styleLink.setAttribute('href', 'style2.css');
-    localStorage.clear()
-    localStorage.setItem('mode', 'light')
-    light.src = "./sun.png";
-    light.style = "box-shadow: 0px 0px 20px 5px #fcca38;"
-    body.style.backgroundColor = "rgb(216, 216, 216)";
-    body.style.color = "rgb(27, 27, 27)";
-    move_up.src = "./icons8-up-48.png";
-    background.src = "./light_background.jpg"
-
-  } else {
-    styleLink.setAttribute('href', 'style.css');
-    localStorage.clear()
-    localStorage.setItem('mode', 'dark')
-    body.style.backgroundColor = "rgb(27, 27, 27)";
-    body.style.color = " rgb(216, 216, 216)";
-    move_up.src = "./icons8-up-48 (1).png";
-    light.src = "./moon.png";
-    light.style = "box-shadow: 0px 0px 20px 5px white"
-    background.src = "./dark_background.jpg"
-
-  }
-})
-
-if (localStorage.getItem('mode') == 'dark') {
-  styleLink.setAttribute('href', 'style.css');
-
+if (localStorage.getItem("mode") == "light") {
+  lightMode();
 } else {
-
-  styleLink.setAttribute('href', 'style2.css');
+  darkMode();
 }
 
+light_dark.addEventListener("click", function () {
+  if (styleLink.getAttribute("href") == "style.css") {
+    lightMode();
+    localStorage.clear();
+    localStorage.setItem("mode", "light");
+  } else {
+    darkMode();
+    localStorage.clear();
+    localStorage.setItem("mode", "dark");
+  }
+});
 
-
-// light_dark.addEventListener("click", function () {
-//   if (body.style.backgroundColor == "rgb(216, 216, 216)") {
-//     // change the image src
-//     body.style.backgroundColor = "rgb(27, 27, 27)";
-//     body.style.color = " rgb(216, 216, 216)";
-//     move_up.src = "./icons8-up-48 (1).png";
-//     light.src = "./moon.png";
-//     light.style = "box-shadow: 0px 0px 20px 5px white"
-//     background.src = "./dark_background.jpg"
-//   } else if ((body.style.backgroundColor = "rgb(27, 27, 27)")) {
-//     light.src = "./sun.png";
-//     light.style = "box-shadow: 0px 0px 20px 5px #fcca38;"
-//     body.style.backgroundColor = "rgb(216, 216, 216)";
-//     body.style.color = "rgb(27, 27, 27)";
-//     move_up.src = "./icons8-up-48.png";
-//     background.src = "./light_background.jpg"
-//   }
-// });
 
 move_up.addEventListener("click", function () {
   window.scrollTo(0, 0);
 });
-
 
 // to jump around selected items
 for (let i = 0; i < 3; i++) {
@@ -96,8 +75,6 @@ for (let i = 0; i < 3; i++) {
   });
 }
 
-
-
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -116,5 +93,5 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-var myCarousel = document.querySelector('#myCarousel')
+var myCarousel = document.querySelector("#myCarousel");
 var carousel = new bootstrap.Carousel(myCarousel);

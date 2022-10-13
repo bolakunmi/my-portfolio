@@ -597,7 +597,7 @@ right: 20px;
   overflow: hidden;
   animation: typewriter 2s steps(13) infinite alternate,
     blink 800ms steps(13) infinite normal;
-  border-right: 3px solid black;
+  border-right: 3px solid white;
   transform: scale(1.2);
   text-transform: capitalize;
   font-weight: 600;
@@ -612,7 +612,7 @@ right: 20px;
 }
 @keyframes blink {
   from {
-    border-color: rgba(0, 0, 0, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
   }
   to {
     border-color: transparent;
@@ -639,6 +639,7 @@ right: 20px;
   height: auto;
   margin: 5px;
 }
+
 
 .skills li {
   list-style: circle;

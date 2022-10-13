@@ -246,7 +246,7 @@ main h1 {
 }
 
 .my_carousel {
-  background: rgb(202 202 202 / 17%);
+  background: rgba(104, 104, 104, 0.307);
   backdrop-filter: blur(3px);
   /* background: linear-gradient(310deg, rgb(224, 224, 224), rgb(162, 199, 255)); */
   /* background: none; */
